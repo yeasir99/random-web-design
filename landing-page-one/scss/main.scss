@@ -11,3 +11,15 @@
         margin: 0 auto;
     }
 }
+
+
+// whatwedo section
+
+.whatwedo {
+    padding: px-to-rem(100) 0;
+
+    @include grid($gtc: repeat(3, 1fr)) {
+        max-width: px-to-rem(1140);
+        margin: 0 auto;
+    }
+}
