@@ -1,4 +1,37 @@
-header {
-  background-color: #000;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(#4834d4));
+  background: linear-gradient(#3498db, #4834d4);
+  height: 100vh;
+}
+
+.header-content {
+  max-width: 71.25rem;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=main.css.map */

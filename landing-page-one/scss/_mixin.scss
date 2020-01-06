@@ -1,0 +1,18 @@
+// GRID
+
+@mixin grid ($grid-on: grid, $gtc: null, $gtr: null) {
+    display: $grid-on;
+    grid-template-columns: $gtc;
+    grid-template-rows: $gtr;
+    @content;
+}
+
+//FLEX
+
+@mixin flex ($flex-on: flex, $fdir: null, $jcon: null, $ait: null) {
+    display: $flex-on;
+    flex-direction: $fdir;
+    justify-content: $jcon;
+    align-items: $ait;
+    @content;
+}

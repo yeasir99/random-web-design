@@ -1,5 +1,13 @@
 @import "variables", "function", "mixin", "reset";
 
-header {
-    background-color: $color-primary;
+// header section
+
+.header {
+    background: linear-gradient(#3498db, #4834d4);
+    height: 100vh;
+
+    &-content {
+        max-width: px-to-rem(1140);
+        margin: 0 auto;
+    }
 }
