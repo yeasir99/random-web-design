@@ -17,9 +17,31 @@
 
 .whatwedo {
     padding: px-to-rem(100) 0;
+    background-color: $color-secondary;
 
     @include grid($gtc: repeat(3, 1fr)) {
         max-width: px-to-rem(1140);
         margin: 0 auto;
+        grid-gap: px-to-rem(20);
+    }
+}
+
+
+// media 
+
+@mixin mq ($break) {
+    $value: map-get($brakepoint, $break);
+    $sm: map-get($brakepoint, 'sm');
+
+    @if $value < $sm {
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (min-width: $value) {
+            @content;
+        }
     }
 }
