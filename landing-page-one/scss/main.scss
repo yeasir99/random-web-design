@@ -25,23 +25,3 @@
         grid-gap: px-to-rem(20);
     }
 }
-
-
-// media 
-
-@mixin mq ($break) {
-    $value: map-get($brakepoint, $break);
-    $sm: map-get($brakepoint, 'sm');
-
-    @if $value < $sm {
-        @media (max-width: $value) {
-            @content;
-        }
-    }
-
-    @else {
-        @media (min-width: $value) {
-            @content;
-        }
-    }
-}
