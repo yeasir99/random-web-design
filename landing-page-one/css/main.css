@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 71.25rem;
+}
+
 .header {
   background: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(#4834d4));
   background: linear-gradient(#3498db, #4834d4);
@@ -31,7 +35,18 @@ a {
 }
 
 .header-content {
+  margin: 0 auto;
+}
+
+.whatwedo {
+  padding: 6.25rem 0;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   max-width: 71.25rem;
   margin: 0 auto;
+  grid-gap: 1.25rem;
 }
 /*# sourceMappingURL=main.css.map */
