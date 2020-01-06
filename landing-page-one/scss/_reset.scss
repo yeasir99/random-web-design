@@ -22,3 +22,9 @@ h3 {
 a {
     text-decoration: none;
 }
+
+// reuseable class
+
+.container {
+    max-width: px-to-rem(1140);
+}
