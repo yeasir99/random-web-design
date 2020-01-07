@@ -7,7 +7,41 @@
     height: 100vh;
 
     &-content {
-        margin: 0 auto;
+        .navigation {
+            height: 12vh;
+
+            @include flex($jcon: space-between) {
+                .logo {
+                    margin-left: px-to-rem(10);
+
+                    @include flex($fdir: column, $jcon: center) {
+                        img {
+                            width: 100%;
+                            height: auto;
+                            max-width: px-to-rem(65);
+                        }
+                    }
+                }
+
+                .burger {
+                    height: 100%;
+                    margin-right: px-to-rem(10);
+
+                    @include flex($fdir: column, $jcon: center) {
+                        &-line {
+                            width: px-to-rem(45);
+                            height: px-to-rem(3);
+                            background-color: #fff;
+                        }
+                    }
+
+
+                    .line2 {
+                        margin: px-to-rem(8) 0;
+                    }
+                }
+            }
+        }
     }
 }
 
