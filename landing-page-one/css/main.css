@@ -46,7 +46,6 @@ a {
 }
 
 .header-content .navigation .logo {
-  margin-left: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,7 +66,6 @@ a {
 
 .header-content .navigation .burger {
   height: 100%;
-  margin-right: 0.625rem;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,5 +157,51 @@ a {
 .whatwedo-info_paragraph {
   font-weight: 500;
   line-height: 150%;
+}
+
+footer {
+  background-color: #333333;
+  padding: 1.5625rem 0;
+}
+
+footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .content .socal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .content .socal-icon {
+  border: solid 1px #000;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0.9375rem;
 }
 /*# sourceMappingURL=main.css.map */

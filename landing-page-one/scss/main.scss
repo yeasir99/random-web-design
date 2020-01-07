@@ -12,8 +12,6 @@
 
             @include flex($jcon: space-between) {
                 .logo {
-                    margin-left: px-to-rem(10);
-
                     @include flex($fdir: column, $jcon: center) {
                         img {
                             width: 100%;
@@ -25,7 +23,6 @@
 
                 .burger {
                     height: 100%;
-                    margin-right: px-to-rem(10);
                     cursor: pointer;
 
                     @include flex($fdir: column, $jcon: center) {
@@ -107,6 +104,35 @@
             &_paragraph {
                 font-weight: 500;
                 line-height: 150%;
+            }
+        }
+    }
+}
+
+// success section
+
+//footer
+footer {
+    background-color: lighten($color-primary, 20%);
+    padding: px-to-rem(25) 0;
+
+    .content {
+        @include flex ($jcon: space-between, $ait: center, $fdir: row) {
+            .socal {
+                @include flex() {
+                    &-icon {
+                        border: solid 1px $color-primary;
+                        width: px-to-rem(40);
+                        height: px-to-rem(40);
+                        border-radius: 50%;
+                        text-align: center;
+                        cursor: pointer;
+
+                        @include flex($jcon: center, $ait: center) {
+                            margin-left: px-to-rem(15);
+                        }
+                    }
+                }
             }
         }
     }
