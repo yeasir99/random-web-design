@@ -63,6 +63,7 @@
                 }
 
                 a {
+                    margin-top: px-to-rem(10);
                     color: $color-secondary;
                     border: solid 2px $color-primary;
                     padding: px-to-rem(12) px-to-rem(26);
@@ -110,18 +111,83 @@
 }
 
 // success section
+.success {
+    background-color: darken($color-secondary, 2.5%);
+
+    &-text {
+        padding: px-to-rem(40);
+        text-align: center;
+
+        p {
+            margin-top: px-to-rem(15);
+            font-weight: 500;
+        }
+    }
+
+    &-content {
+        @include grid ($gtc: repeat(2, 1fr)) {
+            &_item1 {
+                max-width: 100%;
+                height: auto;
+                background-color: $color-secondary;
+                opacity: .7;
+            }
+
+            &_item2 {
+                border: solid 1px lighten($color-primary, 60%);
+                border-left: 0;
+                padding: px-to-rem(50);
+
+                @include flex ($fdir: column, $jcon: space-around) {
+                    h3 {
+                        text-transform: capitalize;
+                    }
+
+                    p {
+                        line-height: 150%;
+                        font-weight: 500;
+                    }
+
+                    a {
+                        color: $color-secondary;
+                        background-color: #3498db;
+                        padding: px-to-rem(12) px-to-rem(25);
+                    }
+                }
+            }
+        }
+    }
+
+    &-gallery {
+        padding: px-to-rem(50) 0;
+
+        @include grid($gtc: repeat(3, 1fr)) {
+            grid-gap: px-to-rem(20);
+
+            &_img {
+                max-width: 100%;
+                height: auto;
+                background-color: #3498db;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+//connect
 
 //footer
 footer {
     background-color: lighten($color-primary, 20%);
     padding: px-to-rem(25) 0;
+    color: $color-secondary;
 
     .content {
         @include flex ($jcon: space-between, $ait: center, $fdir: row) {
             .socal {
                 @include flex() {
                     &-icon {
-                        border: solid 1px $color-primary;
+                        border: solid 1px $color-secondary;
                         width: px-to-rem(40);
                         height: px-to-rem(40);
                         border-radius: 50%;
