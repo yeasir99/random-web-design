@@ -26,11 +26,12 @@
                 .burger {
                     height: 100%;
                     margin-right: px-to-rem(10);
+                    cursor: pointer;
 
                     @include flex($fdir: column, $jcon: center) {
                         &-line {
                             width: px-to-rem(40);
-                            height: px-to-rem(3);
+                            height: px-to-rem(2);
                             background-color: #fff;
                         }
                     }
@@ -60,7 +61,7 @@
                     text-align: center;
                     font-size: px-to-rem(17);
                     color: $color-secondary;
-                    line-height: 155%;
+                    line-height: 160%;
                     letter-spacing: px-to-rem(1);
                 }
 
@@ -87,5 +88,26 @@
         margin: 0 auto;
         grid-gap: px-to-rem(20);
         text-align: center;
+
+        &-info {
+            &_logo {
+                .icon {
+                    border: solid 1px $color-primary;
+                    border-radius: 50%;
+                    padding: px-to-rem(25);
+                    font-size: px-to-rem(30);
+                }
+            }
+
+            &_heading {
+                padding: px-to-rem(25);
+                text-transform: capitalize;
+            }
+
+            &_paragraph {
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
     }
 }
