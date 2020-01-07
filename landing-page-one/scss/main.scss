@@ -8,7 +8,7 @@
 
     &-content {
         .navigation {
-            height: 12vh;
+            height: 10vh;
 
             @include flex($jcon: space-between) {
                 .logo {
@@ -18,7 +18,7 @@
                         img {
                             width: 100%;
                             height: auto;
-                            max-width: px-to-rem(65);
+                            max-width: px-to-rem(60);
                         }
                     }
                 }
@@ -29,7 +29,7 @@
 
                     @include flex($fdir: column, $jcon: center) {
                         &-line {
-                            width: px-to-rem(45);
+                            width: px-to-rem(40);
                             height: px-to-rem(3);
                             background-color: #fff;
                         }
@@ -42,7 +42,37 @@
                 }
             }
         }
+
+        &_text {
+            height: 90vh;
+
+            @include flex($jcon: center, $fdir: column, $ait: center) {
+                h1 {
+                    text-transform: uppercase;
+                    letter-spacing: px-to-rem(10);
+                    padding-bottom: px-to-rem(20);
+                    font-size: px-to-rem(50);
+                }
+
+                p {
+                    padding-bottom: px-to-rem(30);
+                    max-width: px-to-rem(500);
+                    text-align: center;
+                    font-size: px-to-rem(17);
+                    color: $color-secondary;
+                    line-height: 155%;
+                    letter-spacing: px-to-rem(1);
+                }
+
+                a {
+                    color: $color-secondary;
+                    border: solid 2px $color-primary;
+                    padding: px-to-rem(12) px-to-rem(26);
+                }
+            }
+        }
     }
+
 }
 
 
@@ -53,7 +83,7 @@
     background-color: $color-secondary;
 
     @include grid($gtc: repeat(3, 1fr)) {
-        max-width: px-to-rem(1140);
+        max-width: px-to-rem(1024);
         margin: 0 auto;
         grid-gap: px-to-rem(20);
         text-align: center;
