@@ -26,5 +26,6 @@ a {
 // reuseable class
 
 .container {
-    max-width: px-to-rem(1140);
+    max-width: px-to-rem(1024);
+    margin: 0 auto;
 }
