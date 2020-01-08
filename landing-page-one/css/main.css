@@ -234,6 +234,70 @@ a {
   opacity: 0.8;
 }
 
+.connect {
+  margin-bottom: 3.125rem;
+}
+
+.connect-text {
+  text-align: center;
+  padding: 3.125rem;
+}
+
+.connect-text h2 {
+  text-transform: capitalize;
+  margin-bottom: 0.625rem;
+}
+
+.connect-text p {
+  font-weight: 500;
+}
+
+.connect-withus {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65% 35%;
+      grid-template-columns: 65% 35%;
+}
+
+.connect-withus_form input,
+.connect-withus_form textarea {
+  padding: 0.5rem 0.3125rem;
+  outline: none;
+  font-size: 1.0625rem;
+  border: 0;
+  background-color: whitesmoke;
+  width: 100%;
+  display: block;
+}
+
+.connect-withus_form textarea {
+  margin: 0.9375rem 0;
+}
+
+.connect-withus_form input[type=submit] {
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+.connect-withus_form .identity {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.25rem;
+  margin-bottom: 0.9375rem;
+}
+
+.connect-withus_address {
+  margin: 0 auto;
+}
+
+.connect-withus_address h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
 footer {
   background-color: #333333;
   padding: 1.5625rem 0;

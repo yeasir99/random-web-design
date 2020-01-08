@@ -175,6 +175,67 @@
 }
 
 //connect
+.connect {
+    margin-bottom: px-to-rem(50);
+
+    &-text {
+        text-align: center;
+        padding: px-to-rem(50);
+
+        h2 {
+            text-transform: capitalize;
+            margin-bottom: px-to-rem(10);
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    &-withus {
+        @include grid ($gtc: 65% 35%) {
+            &_form {
+
+                input,
+                textarea {
+                    padding: px-to-rem(8) px-to-rem(5);
+                    outline: none;
+                    font-size: px-to-rem(17);
+                    border: 0;
+                    background-color: lighten($color-primary, 96%);
+                    width: 100%;
+                    display: block;
+                }
+
+                textarea {
+                    margin: px-to-rem(15) 0;
+                }
+
+                input[type=submit] {
+                    background-color: #3498db;
+                    color: $color-secondary;
+                    cursor: pointer;
+                }
+
+                .identity {
+                    @include grid ($gtc: repeat(2, 1fr)) {
+                        grid-gap: px-to-rem(20);
+                        margin-bottom: px-to-rem(15);
+                    }
+                }
+            }
+
+            &_address {
+                margin: 0 auto;
+
+                h3 {
+                    text-transform: capitalize;
+                    margin-bottom: px-to-rem(8);
+                }
+            }
+        }
+    }
+}
 
 //footer
 footer {
