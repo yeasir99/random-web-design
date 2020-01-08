@@ -95,6 +95,32 @@ a {
   margin: 0.5rem 0;
 }
 
+.header-content .navigation .bstyle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
+          transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.header-content .navigation .bstyle .line2 {
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.header-content .navigation .bstyle .line3 {
+  -webkit-transform: rotate(45deg) translate(-0.5rem, -0.6rem);
+          transform: rotate(45deg) translate(-0.5rem, -0.6rem);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
 .header-content .mainnav {
   position: absolute;
   width: 50%;
@@ -102,7 +128,7 @@ a {
   top: 0;
   left: 100%;
   visibility: hidden;
-  background-color: #999999;
+  background-color: gray;
   padding: 4.375rem 0;
   opacity: 1;
   display: -webkit-box;
@@ -124,22 +150,28 @@ a {
   margin-bottom: 1.875rem;
 }
 
-.header-content .mainnav .navitem {
+.header-content .mainnav .linkitem {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.header-content .mainnav .navitem li {
+.header-content .mainnav .linkitem li {
   text-align: center;
 }
 
-.header-content .mainnav .navitem li a {
+.header-content .mainnav .linkitem li a {
   color: #000;
   font-weight: 500;
   font-size: 1.125rem;
   padding: 0.9375rem 0;
   display: inline-block;
+}
+
+.header-content .mainnav .navsocal .socal-icon {
+  padding: 0.625rem;
+  font-size: 1.5625rem;
+  cursor: pointer;
 }
 
 .header-content .open {
@@ -186,9 +218,17 @@ a {
 
 .header-content_text a {
   margin-top: 0.625rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   color: #fff;
   border: solid 2px #000;
   padding: 0.75rem 1.625rem;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.header-content_text a:hover {
+  background-color: #000;
 }
 
 .whatwedo {
@@ -205,10 +245,19 @@ a {
 }
 
 .whatwedo-info_logo .icon {
-  border: solid 1px #000;
+  border: solid 1px #4834d4;
   border-radius: 50%;
   padding: 1.5625rem;
   font-size: 1.875rem;
+  color: #3498db;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+.whatwedo-info_logo .icon:hover {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: #fff;
 }
 
 .whatwedo-info_heading {

@@ -13,6 +13,16 @@ const navSlide = () => {
         delay: index * 0.1
       });
     });
+    burger.classList.toggle("bstyle");
   });
 };
 navSlide();
+
+// const lineOne = burger.querySelector(".line1");
+//     const lineTwo = burger.querySelector(".line");
+//     const lineThree = burger.querySelector(".line3");
+//     gsap.to(lineOne,{
+
+//     })
+//     gsap.to(lineTwo,{});
+//     gsap.to(lineThree,{})
