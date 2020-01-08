@@ -1,1 +1,1 @@
-# rendom web design for practice
+# random web design for practice
