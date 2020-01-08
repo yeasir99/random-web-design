@@ -5,6 +5,7 @@
 .header {
     background: linear-gradient(#3498db, #4834d4);
     height: 100vh;
+    overflow-x: hidden;
 
     &-content {
         position: relative;
@@ -45,11 +46,13 @@
         }
 
         .mainnav {
-            @include position ($width: 50%, $height: 0%, $t: 0, $l: 50%) {
+
+
+            @include position ($width: 50%, $height: 100vh, $t: 0, $l: 100%) {
+                visibility: hidden;
                 background-color: lighten($color-primary, 60%);
                 padding: px-to-rem(70) 0;
-                opacity: 0;
-                transition: all 0.5s ease-in-out;
+                opacity: 1;
 
                 @include flex($fdir: column, $ait: center) {
                     text-transform: uppercase;
@@ -82,8 +85,10 @@
         }
 
         .open {
+            transition: opacity 0.1s;
+            left: 50%;
             opacity: 1;
-            height: 100vh;
+            visibility: visible;
         }
 
         &_text {
