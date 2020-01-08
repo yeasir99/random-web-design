@@ -232,6 +232,12 @@
                     text-transform: capitalize;
                     margin-bottom: px-to-rem(8);
                 }
+
+                &-main,
+                &-email,
+                &-phone {
+                    margin-bottom: px-to-rem(25);
+                }
             }
         }
     }

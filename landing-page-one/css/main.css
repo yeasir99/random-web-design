@@ -298,6 +298,10 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.connect-withus_address-main, .connect-withus_address-email, .connect-withus_address-phone {
+  margin-bottom: 1.5625rem;
+}
+
 footer {
   background-color: #333333;
   padding: 1.5625rem 0;
