@@ -97,11 +97,14 @@ a {
 .header-content .mainnav {
   position: absolute;
   width: 50%;
-  height: 100vh;
+  height: 0%;
   top: 0;
   left: 50%;
   background-color: #999999;
   padding: 4.375rem 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,6 +140,11 @@ a {
   font-size: 1.125rem;
   padding: 0.9375rem 0;
   display: inline-block;
+}
+
+.header-content .open {
+  opacity: 1;
+  height: 100vh;
 }
 
 .header-content_text {
