@@ -202,12 +202,12 @@ a {
 .header-content_text h1 {
   text-transform: uppercase;
   letter-spacing: 0.625rem;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.875rem;
   font-size: 3.125rem;
 }
 
 .header-content_text p {
-  padding-bottom: 1.875rem;
+  padding-bottom: 2.5rem;
   max-width: 31.25rem;
   text-align: center;
   font-size: 1.0625rem;
@@ -441,12 +441,15 @@ footer .content .socal {
 }
 
 footer .content .socal-icon {
-  border: solid 1px #fff;
+  border: solid 1px #3498db;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
+  color: #3498db;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,5 +460,10 @@ footer .content .socal-icon {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 0.9375rem;
+}
+
+footer .content .socal-icon:hover {
+  background-color: #3498db;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

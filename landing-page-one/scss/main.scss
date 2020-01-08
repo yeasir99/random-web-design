@@ -122,12 +122,12 @@
                 h1 {
                     text-transform: uppercase;
                     letter-spacing: px-to-rem(10);
-                    padding-bottom: px-to-rem(20);
+                    padding-bottom: px-to-rem(30);
                     font-size: px-to-rem(50);
                 }
 
                 p {
-                    padding-bottom: px-to-rem(30);
+                    padding-bottom: px-to-rem(40);
                     max-width: px-to-rem(500);
                     text-align: center;
                     font-size: px-to-rem(17);
@@ -343,15 +343,23 @@ footer {
             .socal {
                 @include flex() {
                     &-icon {
-                        border: solid 1px $color-secondary;
+                        border: solid 1px #3498db;
+                        ;
                         width: px-to-rem(40);
                         height: px-to-rem(40);
                         border-radius: 50%;
                         text-align: center;
                         cursor: pointer;
+                        color: #3498db;
+                        transition: all 0.3 ease-in-out;
 
                         @include flex($jcon: center, $ait: center) {
                             margin-left: px-to-rem(15);
+                        }
+
+                        &:hover {
+                            background-color: #3498db;
+                            color: $color-secondary;
                         }
                     }
                 }

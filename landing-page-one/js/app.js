@@ -32,11 +32,6 @@ const navSlide = () => {
 };
 navSlide();
 
-// const lineOne = burger.querySelector(".line1");
-//     const lineTwo = burger.querySelector(".line");
-//     const lineThree = burger.querySelector(".line3");
-//     gsap.to(lineOne,{
+//mail validation
 
-//     })
-//     gsap.to(lineTwo,{});
-//     gsap.to(lineThree,{})
+const mailAddress = document.querySelector("input[type=email]");
