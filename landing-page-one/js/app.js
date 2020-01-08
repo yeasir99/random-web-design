@@ -14,6 +14,20 @@ const navSlide = () => {
       });
     });
     burger.classList.toggle("bstyle");
+
+    const navLinks = document.querySelectorAll(".linkitem li");
+    navLinks.forEach((item, index) => {
+      item.addEventListener("mouseenter", function() {
+        gsap.to(item, {
+          scale: 1.3
+        });
+        item.addEventListener("mouseleave", function() {
+          gsap.to(item, {
+            scale: 1
+          });
+        });
+      });
+    });
   });
 };
 navSlide();
