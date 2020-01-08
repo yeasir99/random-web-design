@@ -6,7 +6,10 @@
     background: linear-gradient(#3498db, #4834d4);
     height: 100vh;
 
+
     &-content {
+        position: relative;
+
         .navigation {
             height: 10vh;
 
@@ -22,6 +25,7 @@
                 }
 
                 .burger {
+                    z-index: 999;
                     height: 100%;
                     cursor: pointer;
 
@@ -36,6 +40,41 @@
 
                     .line2 {
                         margin: px-to-rem(8) 0;
+                    }
+                }
+            }
+        }
+
+        .mainnav {
+            @include position ($l: 50%, $width: 50%, $height: 100vh, $t: 0) {
+                background-color: lighten($color-primary, 60%);
+                padding: px-to-rem(70) 0;
+
+                @include flex($fdir: column, $ait: center) {
+                    text-transform: uppercase;
+
+                    .navitem:nth-child(1),
+                    .navitem:nth-child(2),
+                    .navitem:nth-child(3) {
+                        margin-bottom: px-to-rem(30);
+                    }
+
+                    .navitem {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            text-align: center;
+
+                            a {
+                                color: $color-primary;
+                                font-weight: 500;
+                                font-size: px-to-rem(18);
+                                padding: px-to-rem(15) 0;
+                                display: inline-block;
+                            }
+                        }
                     }
                 }
             }

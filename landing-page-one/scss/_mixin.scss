@@ -35,3 +35,16 @@
         }
     }
 }
+
+// position
+
+@mixin position ($type: absolute, $width: null, $height: null, $l: null, $t: null, $r: null, $b: null) {
+    position: $type;
+    width: $width;
+    height: $height;
+    top: $t;
+    left: $l;
+    right: $r;
+    bottom: $b;
+    @content;
+}
