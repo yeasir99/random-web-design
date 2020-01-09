@@ -39,7 +39,7 @@ const headerAnimation = () => {
   gsap.from(mainLogo, {
     y: -100,
     ease: "elastic.out(1, 0.3)",
-    delay: 1.5
+    delay: 1
   });
   const burger = document.querySelector(".burger");
   gsap.from(burger, {
@@ -50,7 +50,3 @@ const headerAnimation = () => {
 }
 
 headerAnimation();
-
-//mail validation
-
-const mailAddress = document.querySelector("input[type=email]");

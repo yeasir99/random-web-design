@@ -326,6 +326,12 @@ a {
   padding: 0.75rem 1.5625rem;
 }
 
+.success-content_item2 a:hover {
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: #4834d4;
+}
+
 .success-gallery {
   padding: 3.125rem 0;
   display: -ms-grid;
@@ -386,6 +392,12 @@ a {
   background-color: #3498db;
   color: #fff;
   cursor: pointer;
+}
+
+.connect-withus_form input[type="submit"]:hover {
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: #4834d4;
 }
 
 .connect-withus_form .identity {
@@ -464,4 +476,3 @@ footer .content .socal-icon:hover {
   background-color: #3498db;
   color: #fff;
 }
-/*# sourceMappingURL=main.css.map */
