@@ -105,11 +105,9 @@ a {
 }
 
 .header-content .navigation .bstyle .line2 {
-  opacity: 0;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  width: 0;
+  -webkit-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
 }
 
 .header-content .navigation .bstyle .line3 {
@@ -295,7 +293,7 @@ a {
   max-width: 100%;
   height: auto;
   background-color: #fff;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .success-content_item2 {
@@ -384,7 +382,7 @@ a {
   margin: 0.9375rem 0;
 }
 
-.connect-withus_form input[type=submit] {
+.connect-withus_form input[type="submit"] {
   background-color: #3498db;
   color: #fff;
   cursor: pointer;
