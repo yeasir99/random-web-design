@@ -19,11 +19,13 @@ const navSlide = () => {
     navLinks.forEach((item, index) => {
       item.addEventListener("mouseenter", function() {
         gsap.to(item, {
-          scale: 1.3
+          scale: 1.3,
+          duration: 0.2
         });
         item.addEventListener("mouseleave", function() {
           gsap.to(item, {
-            scale: 1
+            scale: 1,
+            duration: 0.2
           });
         });
       });
@@ -32,11 +34,13 @@ const navSlide = () => {
     navsocal.forEach((item, index) => {
       item.addEventListener("mouseenter", function() {
         gsap.to(item, {
-          scale: 1.3
+          scale: 1.3,
+          duration: 0.2
         });
         item.addEventListener("mouseleave", function() {
           gsap.to(item, {
-            scale: 1
+            scale: 1,
+            duration: 0.2
           });
         });
       });
