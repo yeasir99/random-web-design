@@ -10,7 +10,7 @@ const navSlide = () => {
         x: 200,
         duration: 1,
         ease: "elastic.out(1, 0.3)",
-        delay: index * 0.1
+        delay: index * 0.15
       });
     });
     burger.classList.toggle("bstyle");
