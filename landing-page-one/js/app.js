@@ -28,6 +28,19 @@ const navSlide = () => {
         });
       });
     });
+    const navsocal = document.querySelectorAll(".navsocal .socal-icon");
+    navsocal.forEach((item, index) => {
+      item.addEventListener("mouseenter", function() {
+        gsap.to(item, {
+          scale: 1.3
+        });
+        item.addEventListener("mouseleave", function() {
+          gsap.to(item, {
+            scale: 1
+          });
+        });
+      });
+    });
   });
 };
 
