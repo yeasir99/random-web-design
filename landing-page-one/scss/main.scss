@@ -3,374 +3,380 @@
 // header section
 
 .header {
-    background: linear-gradient(#3498db, #4834d4);
-    height: 100vh;
-    overflow-x: hidden;
+  background: linear-gradient(#3498db, #4834d4);
+  height: 100vh;
+  overflow-x: hidden;
 
-    &-content {
-        position: relative;
+  &-content {
+    position: relative;
 
-        .navigation {
-            height: 10vh;
+    .navigation {
+      height: 10vh;
 
-            @include flex($jcon: space-between) {
-                .logo {
-                    @include flex($fdir: column, $jcon: center) {
-                        img {
-                            width: 100%;
-                            height: auto;
-                            max-width: px-to-rem(60);
-                        }
-                    }
-                }
-
-                .burger {
-                    z-index: 999;
-                    height: 100%;
-                    cursor: pointer;
-
-                    @include flex($fdir: column, $jcon: center) {
-                        &-line {
-                            width: px-to-rem(40);
-                            height: px-to-rem(2);
-                            background-color: #fff;
-                        }
-                    }
-
-                    .line2 {
-                        margin: px-to-rem(8) 0;
-                    }
-                }
-
-                .bstyle {
-                    .line1 {
-                        transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
-                        transition: transform 0.2s ease-in-out;
-                    }
-
-                    .line2 {
-                        width: 0;
-                        transition: width 0.2s ease-in-out;
-                    }
-
-                    .line3 {
-                        transform: rotate(45deg) translate(-0.5rem, -0.6rem);
-                        transition: transform 0.2s ease-in-out;
-                    }
-                }
+      @include flex($jcon: space-between) {
+        .logo {
+          @include flex($fdir: column, $jcon: center) {
+            img {
+              width: 100%;
+              height: auto;
+              max-width: px-to-rem(60);
             }
+          }
         }
 
-        .mainnav {
-            @include position($width: 50%, $height: 100vh, $t: 0, $l: 100%) {
-                visibility: hidden;
-                background-color: darken($color-secondary, 50%);
-                padding: px-to-rem(70) 0;
-                opacity: 1;
+        .burger {
+          z-index: 999;
+          height: 100%;
+          cursor: pointer;
 
-                @include flex($fdir: column, $ait: center) {
-                    text-transform: uppercase;
-
-                    .navitem:nth-child(1),
-                    .navitem:nth-child(2),
-                    .navitem:nth-child(3) {
-                        margin-bottom: px-to-rem(30);
-                    }
-
-                    .linkitem {
-                        list-style: none;
-                        margin: 0;
-                        padding: 0;
-
-                        li {
-                            text-align: center;
-
-                            a {
-                                color: $color-primary;
-                                font-weight: 500;
-                                font-size: px-to-rem(18);
-                                padding: px-to-rem(15) 0;
-                                display: inline-block;
-                            }
-                        }
-                    }
-
-                    .navsocal {
-                        .socal-icon {
-                            padding: px-to-rem(10);
-                            font-size: px-to-rem(25);
-                            cursor: pointer;
-                        }
-                    }
-                }
+          @include flex($fdir: column, $jcon: center) {
+            &-line {
+              width: px-to-rem(40);
+              height: px-to-rem(2);
+              background-color: #fff;
             }
+          }
+
+          .line2 {
+            margin: px-to-rem(8) 0;
+          }
         }
 
-        .open {
-            transition: opacity 0.1s;
-            left: 50%;
-            opacity: 1;
-            visibility: visible;
+        .bstyle {
+          .line1 {
+            transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
+            transition: transform 0.2s ease-in-out;
+          }
+
+          .line2 {
+            width: 0;
+            transition: width 0.2s ease-in-out;
+          }
+
+          .line3 {
+            transform: rotate(45deg) translate(-0.5rem, -0.6rem);
+            transition: transform 0.2s ease-in-out;
+          }
         }
-
-        &_text {
-            height: 90vh;
-
-            @include flex($jcon: center, $fdir: column, $ait: center) {
-                h1 {
-                    text-transform: uppercase;
-                    letter-spacing: px-to-rem(10);
-                    padding-bottom: px-to-rem(30);
-                    font-size: px-to-rem(50);
-                }
-
-                p {
-                    padding-bottom: px-to-rem(40);
-                    max-width: px-to-rem(500);
-                    text-align: center;
-                    font-size: px-to-rem(17);
-                    color: $color-secondary;
-                    line-height: 160%;
-                    letter-spacing: px-to-rem(1);
-                }
-
-                a {
-                    margin-top: px-to-rem(10);
-                    font-size: px-to-rem(20);
-                    font-weight: 500;
-                    color: $color-secondary;
-                    border: solid 2px $color-primary;
-                    padding: px-to-rem(12) px-to-rem(26);
-                    transition: background 0.3s ease-in-out;
-
-                    &:hover {
-                        background-color: $color-primary;
-                    }
-                }
-            }
-        }
+      }
     }
+
+    .mainnav {
+      @include position($width: 50%, $height: 100vh, $t: 0, $l: 100%) {
+        visibility: hidden;
+        background-color: darken($color-secondary, 50%);
+        padding: px-to-rem(70) 0;
+        opacity: 1;
+
+        @include flex($fdir: column, $ait: center) {
+          text-transform: uppercase;
+
+          .navitem:nth-child(1),
+          .navitem:nth-child(2),
+          .navitem:nth-child(3) {
+            margin-bottom: px-to-rem(30);
+          }
+
+          .linkitem {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              text-align: center;
+
+              a {
+                color: $color-primary;
+                font-weight: 500;
+                font-size: px-to-rem(18);
+                padding: px-to-rem(15) 0;
+                display: inline-block;
+              }
+            }
+          }
+
+          .navsocal {
+            .socal-icon {
+              padding: px-to-rem(10);
+              font-size: px-to-rem(25);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .open {
+      transition: opacity 0.1s;
+      left: 50%;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &_text {
+      height: 90vh;
+
+      @include flex($jcon: center, $fdir: column, $ait: center) {
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: px-to-rem(10);
+          padding-bottom: px-to-rem(30);
+          font-size: px-to-rem(50);
+        }
+
+        p {
+          padding-bottom: px-to-rem(40);
+          max-width: px-to-rem(500);
+          text-align: center;
+          font-size: px-to-rem(17);
+          color: $color-secondary;
+          line-height: 160%;
+          letter-spacing: px-to-rem(1);
+        }
+
+        a {
+          margin-top: px-to-rem(10);
+          font-size: px-to-rem(20);
+          font-weight: 500;
+          color: $color-secondary;
+          border: solid 2px $color-primary;
+          padding: px-to-rem(12) px-to-rem(26);
+          transition: background 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $color-primary;
+          }
+        }
+      }
+    }
+  }
 }
 
 // whatwedo section
 
 .whatwedo {
-    padding: px-to-rem(100) 0;
-    background-color: $color-secondary;
+  padding: px-to-rem(100) 0;
+  background-color: $color-secondary;
 
-    @include grid($gtc: repeat(3, 1fr)) {
-        max-width: px-to-rem(1024);
-        margin: 0 auto;
-        grid-gap: px-to-rem(20);
-        text-align: center;
+  @include grid($gtc: repeat(3, 1fr)) {
+    max-width: px-to-rem(1024);
+    margin: 0 auto;
+    grid-gap: px-to-rem(20);
+    text-align: center;
 
-        &-info {
-            &_logo {
-                .icon {
-                    border: solid 1px #4834d4;
-                    border-radius: 50%;
-                    padding: px-to-rem(25);
-                    font-size: px-to-rem(30);
-                    color: #3498db;
-                    transition: all 0.3 ease-in-out;
+    &-info {
+      &_logo {
+        .icon {
+          border: solid 1px #4834d4;
+          border-radius: 50%;
+          padding: px-to-rem(25);
+          font-size: px-to-rem(30);
+          color: #3498db;
+          transition: all 0.3 ease-in-out;
 
-                    &:hover {
-                        background-color: #3498db;
-                        border-color: #3498db;
-                        color: $color-secondary;
-                    }
-                }
-            }
-
-            &_heading {
-                padding: px-to-rem(25);
-                text-transform: capitalize;
-            }
-
-            &_paragraph {
-                font-weight: 500;
-                line-height: 150%;
-            }
+          &:hover {
+            background-color: #3498db;
+            border-color: #3498db;
+            color: $color-secondary;
+          }
         }
+      }
+
+      &_heading {
+        padding: px-to-rem(25);
+        text-transform: capitalize;
+      }
+
+      &_paragraph {
+        font-weight: 500;
+        line-height: 150%;
+      }
     }
+  }
 }
 
 // success section
 .success {
-    background-color: darken($color-secondary, 2.5%);
+  background-color: darken($color-secondary, 2.5%);
 
-    &-text {
-        padding: px-to-rem(40);
-        text-align: center;
+  &-text {
+    padding: px-to-rem(40);
+    text-align: center;
 
-        p {
-            margin-top: px-to-rem(15);
+    p {
+      margin-top: px-to-rem(15);
+      font-weight: 500;
+    }
+  }
+
+  &-content {
+    @include grid($gtc: repeat(2, 1fr)) {
+      &_item1 {
+        max-width: 100%;
+        height: auto;
+        background-color: $color-secondary;
+        opacity: 0.7;
+      }
+
+      &_item2 {
+        border: solid 1px lighten($color-primary, 60%);
+        border-left: 0;
+        padding: px-to-rem(50);
+
+        @include flex($fdir: column, $jcon: space-around) {
+          h3 {
+            text-transform: capitalize;
+          }
+
+          p {
+            line-height: 150%;
             font-weight: 500;
-        }
-    }
+          }
 
-    &-content {
-        @include grid($gtc: repeat(2, 1fr)) {
-            &_item1 {
-                max-width: 100%;
-                height: auto;
-                background-color: $color-secondary;
-                opacity: 0.7;
+          a {
+            color: $color-secondary;
+            background-color: #3498db;
+            padding: px-to-rem(12) px-to-rem(25);
+
+            &:hover {
+              transition: background 0.3s ease-in-out;
+              background: #4834d4;
             }
-
-            &_item2 {
-                border: solid 1px lighten($color-primary, 60%);
-                border-left: 0;
-                padding: px-to-rem(50);
-
-                @include flex($fdir: column, $jcon: space-around) {
-                    h3 {
-                        text-transform: capitalize;
-                    }
-
-                    p {
-                        line-height: 150%;
-                        font-weight: 500;
-                    }
-
-                    a {
-                        color: $color-secondary;
-                        background-color: #3498db;
-                        padding: px-to-rem(12) px-to-rem(25);
-
-                        &:hover {
-                            transition: background 0.3s ease-in-out;
-                            background: #4834d4;
-                        }
-                    }
-                }
-            }
+          }
         }
+      }
     }
+  }
 
-    &-gallery {
-        padding: px-to-rem(50) 0;
+  &-gallery {
+    padding: px-to-rem(50) 0;
 
-        @include grid($gtc: repeat(3, 1fr)) {
-            grid-gap: px-to-rem(20);
+    @include grid($gtc: repeat(3, 1fr)) {
+      grid-gap: px-to-rem(20);
 
-            &_img {
-                max-width: 100%;
-                height: auto;
-                background-color: #3498db;
-                opacity: 0.8;
-            }
-        }
+      &_img {
+        max-width: 100%;
+        height: auto;
+        background-color: #3498db;
+        opacity: 0.8;
+      }
     }
+  }
 }
 
 //connect
 .connect {
-    margin-bottom: px-to-rem(50);
+  margin-bottom: px-to-rem(50);
 
-    &-text {
-        text-align: center;
-        padding: px-to-rem(50);
+  &-text {
+    text-align: center;
+    padding: px-to-rem(50);
 
-        h2 {
-            text-transform: capitalize;
-            margin-bottom: px-to-rem(10);
-        }
-
-        p {
-            font-weight: 500;
-        }
+    h2 {
+      text-transform: capitalize;
+      margin-bottom: px-to-rem(10);
     }
 
-    &-withus {
-        @include grid($gtc: 65% 35%) {
-            &_form {
-
-                input,
-                textarea {
-                    padding: px-to-rem(8) px-to-rem(5);
-                    outline: none;
-                    font-size: px-to-rem(17);
-                    border: 0;
-                    background-color: lighten($color-primary, 96%);
-                    width: 100%;
-                    display: block;
-                }
-
-                textarea {
-                    margin: px-to-rem(15) 0;
-                }
-
-                input[type="submit"] {
-                    background-color: #3498db;
-                    color: $color-secondary;
-                    cursor: pointer;
-
-                    &:hover {
-                        transition: background 0.3s ease-in-out;
-                        background: #4834d4;
-                    }
-                }
-
-                .identity {
-                    @include grid($gtc: repeat(2, 1fr)) {
-                        grid-gap: px-to-rem(20);
-                        margin-bottom: px-to-rem(15);
-                    }
-                }
-            }
-
-            &_address {
-                margin: 0 auto;
-
-                h3 {
-                    text-transform: capitalize;
-                    margin-bottom: px-to-rem(8);
-                }
-
-                &-main,
-                &-email,
-                &-phone {
-                    margin-bottom: px-to-rem(25);
-                }
-            }
-        }
+    p {
+      font-weight: 500;
     }
+  }
+
+  &-withus {
+    @include grid($gtc: 65% 35%) {
+      &_form {
+        input,
+        textarea {
+          padding: px-to-rem(8) px-to-rem(5);
+          outline: none;
+          font-size: px-to-rem(17);
+          border: 0;
+          background-color: lighten($color-primary, 96%);
+          width: 100%;
+          display: block;
+        }
+
+        textarea {
+          margin: px-to-rem(15) 0;
+        }
+
+        input[type="submit"] {
+          background-color: #3498db;
+          color: $color-secondary;
+          cursor: pointer;
+
+          &:hover {
+            transition: background 0.3s ease-in-out;
+            background: #4834d4;
+          }
+        }
+
+        .identity {
+          @include grid($gtc: repeat(2, 1fr)) {
+            grid-gap: px-to-rem(20);
+            margin-bottom: px-to-rem(15);
+          }
+        }
+      }
+
+      &_address {
+        margin: 0 auto;
+
+        h3 {
+          text-transform: capitalize;
+          margin-bottom: px-to-rem(8);
+        }
+
+        &-main,
+        &-email,
+        &-phone {
+          margin-bottom: px-to-rem(25);
+        }
+      }
+    }
+  }
 }
 
 //footer
 footer {
-    background-color: lighten($color-primary, 20%);
-    padding: px-to-rem(25) 0;
-    color: $color-secondary;
+  background-color: lighten($color-primary, 20%);
+  padding: px-to-rem(25) 0;
+  color: $color-secondary;
 
-    .content {
-        @include flex($jcon: space-between, $ait: center, $fdir: row) {
-            .socal {
-                @include flex() {
-                    &-icon {
-                        border: solid 1px #3498db;
-                        width: px-to-rem(40);
-                        height: px-to-rem(40);
-                        border-radius: 50%;
-                        text-align: center;
-                        cursor: pointer;
-                        color: #3498db;
-                        transition: all 0.3 ease-in-out;
+  .content {
+    @include flex($jcon: space-between, $ait: center, $fdir: row) {
+      .socal {
+        @include flex() {
+          &-icon {
+            border: solid 1px #3498db;
+            width: px-to-rem(40);
+            height: px-to-rem(40);
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            color: #3498db;
+            transition: all 0.3 ease-in-out;
 
-                        @include flex($jcon: center, $ait: center) {
-                            margin-left: px-to-rem(15);
-                        }
-
-                        &:hover {
-                            background-color: #3498db;
-                            color: $color-secondary;
-                        }
-                    }
-                }
+            @include flex($jcon: center, $ait: center) {
+              margin-left: px-to-rem(15);
             }
+
+            &:hover {
+              background-color: #3498db;
+              color: $color-secondary;
+            }
+          }
         }
+      }
     }
+  }
 }
 
 // interact with javascript
+
+.invalid {
+  border: 1px solid red !important;
+}
+.valid {
+  border: 1px solid green !important;
+}

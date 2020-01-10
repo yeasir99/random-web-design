@@ -476,3 +476,11 @@ footer .content .socal-icon:hover {
   background-color: #3498db;
   color: #fff;
 }
+
+.invalid {
+  border: 1px solid red !important;
+}
+
+.valid {
+  border: 1px solid green !important;
+}
