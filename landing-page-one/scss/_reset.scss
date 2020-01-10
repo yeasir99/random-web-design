@@ -28,4 +28,24 @@ a {
 .container {
     max-width: px-to-rem(1024);
     margin: 0 auto;
+
+
+    @include mq('sm') {
+        padding: 0 px-to-rem(10);
+    }
+
+    @include mq('med') {
+        padding: 0 px-to-rem(15);
+    }
+
+    @include mq('lg') {
+        padding: 0 px-to-rem(0);
+    }
 }
+
+
+// $brakepoint: ('xs': 575px,
+//     'sm': 576px,
+//     'med': 768px,
+//     'lg': 992px,
+// );
