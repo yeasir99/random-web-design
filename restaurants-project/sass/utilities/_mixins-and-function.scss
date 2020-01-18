@@ -3,6 +3,22 @@
     @return ($rem / $px) * 1rem;
 }
 
+//center with position
+
+@mixin centerP($value) {
+    position: absolute;
+    left: 50%;
+    top: $value;
+}
+
+//center with flex
+
+@mixin centerF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // media
 @mixin mq($break) {
     $value: map-get($brakepoint, $break);
