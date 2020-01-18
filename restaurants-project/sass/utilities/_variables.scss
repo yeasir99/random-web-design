@@ -2,3 +2,9 @@ $color-primary: #d3ab55;
 $color-secondary: #bbb;
 $color-white: #fff;
 $color-black: #000;
+
+$brakepoint: ('xs': 575px,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+);
