@@ -1,0 +1,15 @@
+@import "utilities/variables";
+@import "utilities/functions";
+@import "utilities/mixins";
+
+@import "base/reset";
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/buttons";
+body {
+  background-color: $color-primary;
+  max-width: 1140px;
+}
