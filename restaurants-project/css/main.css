@@ -4,3 +4,110 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  height: 100vh;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.6))), url(../images/bg.jpg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.header .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header .banner {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn-main {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.0625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  color: #d3ab55;
+  display: inline-block;
+  border: 1px solid #d3ab55;
+  padding: 0.9375rem 1.25rem;
+}
+
+.brand-logo {
+  font-size: 4.375rem;
+  color: #d3ab55;
+  width: 6.875rem;
+  height: 6.875rem;
+  border: 3px solid #d3ab55;
+  border-radius: 50%;
+  margin-right: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.brand-name_main {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.125rem;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 0.125rem;
+}
+
+.brand-name_sub {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-align: center;
+  color: #bbb;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 0.125rem;
+}
+
+.banner-maintitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 6.25rem;
+  font-weight: 300;
+  color: #d3ab55;
+  margin-bottom: 2.5rem;
+}
+
+.banner-subtitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  color: #bbb;
+  margin-bottom: 5rem;
+  text-align: center;
+}
