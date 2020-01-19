@@ -51,7 +51,14 @@ a {
   color: #d3ab55;
   display: inline-block;
   border: 1px solid #d3ab55;
-  padding: 0.9375rem 1.25rem;
+  padding: 0.8125rem 1.25rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn-main:hover {
+  background-color: #d3ab55;
+  color: #000;
 }
 
 .brand-logo {

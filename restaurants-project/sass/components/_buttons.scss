@@ -1,0 +1,15 @@
+.btn-main {
+    @include font($family: $josefin, $size: 17);
+    text-transform: uppercase;
+    letter-spacing: px-rem(1);
+    color: $color-primary;
+    display: inline-block;
+    border: 1px solid $color-primary;
+    padding: px-rem(13) px-rem(20);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-black;
+    }
+}

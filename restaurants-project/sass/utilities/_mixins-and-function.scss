@@ -1,5 +1,5 @@
 // pixel to rem
-@function px-rem($rem, $px:16) {
+@function px-rem($rem, $px: 16) {
     @return ($rem / $px) * 1rem;
 }
 
@@ -9,6 +9,7 @@
     position: absolute;
     left: 50%;
     top: $value;
+    transform: translate(-50%, -50%);
 }
 
 //center with flex
@@ -17,6 +18,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+//font
+
+@mixin font($family: null, $size: null, $weight: null) {
+    font: {
+        family: $family;
+        size: px-rem($size);
+        weight: $weight;
+    }
 }
 
 // media
