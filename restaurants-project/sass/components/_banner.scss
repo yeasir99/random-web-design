@@ -1,0 +1,58 @@
+.brand {
+    &-logo {
+        font-size: px-rem(70);
+        color: $color-primary;
+        width: px-rem(110);
+        height: px-rem(110);
+        border: 3px solid $color-primary;
+        border-radius: 50%;
+        margin-right: px-rem(20);
+        @include centerF;
+        text-decoration: none;
+    }
+
+    &-name {
+        &_main {
+            font: {
+                family: $josefin;
+                size: px-rem(50);
+                weight: 300;
+            }
+
+            padding: px-rem(8) 0;
+            text-transform: uppercase;
+            color: $color-secondary;
+            letter-spacing: px-rem(2);
+        }
+
+        &_sub {
+            font: {
+                family: $josefin;
+                size: px-rem(18);
+                weight: 300;
+            }
+
+            text-align: center;
+            color: $color-secondary;
+            text-transform: uppercase;
+            color: $color-secondary;
+            letter-spacing: px-rem(2);
+        }
+    }
+}
+
+.banner {
+    &-maintitle {
+        @include font($family: $dancing, $size: 100, $weight: 300);
+        color: $color-primary;
+        margin-bottom: px-rem(40);
+    }
+
+    &-subtitle {
+        @include font($family: $josefin, $size: 60, $weight: 300);
+        color: $color-secondary;
+        margin-bottom: px-rem(80);
+        text-align: center;
+    }
+
+}
