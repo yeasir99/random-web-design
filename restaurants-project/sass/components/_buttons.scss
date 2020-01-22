@@ -13,3 +13,20 @@
         color: $color-black;
     }
 }
+
+.burger-menu {
+    position: absolute;
+    top: px-rem(10);
+    right: px-rem(10);
+    width: px-rem(100);
+    height: px-rem(100);
+    background-color: $color-primary;
+    z-index: 300;
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+
+        &-line {}
+    }
+}
