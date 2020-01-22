@@ -16,17 +16,53 @@
 
 .burger-menu {
     position: absolute;
-    top: px-rem(10);
-    right: px-rem(10);
-    width: px-rem(100);
-    height: px-rem(100);
-    background-color: $color-primary;
+    top: px-rem(50);
+    right: px-rem(30);
+    position: fixed;
     z-index: 300;
 
     .menu {
+        width: px-rem(45);
+        height: px-rem(40);
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        cursor: pointer;
+        transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
 
-        &-line {}
+        &-line {
+            height: px-rem(8);
+            width: px-rem(45);
+            background-color: $color-black;
+            transform-origin: right;
+        }
+
+        .menu-line-1 {
+            transition: transform 0.2s 0.3s;
+        }
+
+        .menu-line-2 {
+            transition: opacity 0.2s 0.3s;
+        }
+
+        .menu-line-3 {
+            transition: transform 0.2s 0.3s;
+        }
     }
+}
+
+.checkbox:checked~.burger-menu .menu {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked~.burger-menu .menu .menu-line-1 {
+    transform: rotateZ(-45deg);
+}
+
+.checkbox:checked~.burger-menu .menu .menu-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked~.burger-menu .menu .menu-line-3 {
+    transform: rotateZ(45deg);
 }

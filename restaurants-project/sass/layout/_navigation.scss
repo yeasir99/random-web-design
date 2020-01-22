@@ -10,8 +10,9 @@
             position: absolute;
             height: 100vh;
             width: 50vw;
-            left: 0;
+            left: -50%;
             background-color: lighten($color-black, 35%);
+            transition: left .2s cubic-bezier(1, 0, 0, 1);
 
             &_img {
                 width: 50%;
@@ -44,8 +45,9 @@
             position: fixed;
             height: 100vh;
             width: 50vw;
-            right: 0;
+            right: -50%;
             background-color: lighten($color-black, 25%);
+            transition: right .2s cubic-bezier(1, 0, 0, 1);
 
 
             .mainnav {
@@ -79,4 +81,12 @@
             }
         }
     }
+}
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-left {
+    left: 0;
+}
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-right {
+    right: 0;
 }

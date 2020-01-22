@@ -25,8 +25,10 @@ a {
   position: absolute;
   height: 100vh;
   width: 50vw;
-  left: 0;
+  left: -50%;
   background-color: #595959;
+  -webkit-transition: left 0.2s cubic-bezier(1, 0, 0, 1);
+  transition: left 0.2s cubic-bezier(1, 0, 0, 1);
 }
 
 .navbar-navigation-left_img {
@@ -57,8 +59,10 @@ a {
   position: fixed;
   height: 100vh;
   width: 50vw;
-  right: 0;
+  right: -50%;
   background-color: #404040;
+  -webkit-transition: right 0.2s cubic-bezier(1, 0, 0, 1);
+  transition: right 0.2s cubic-bezier(1, 0, 0, 1);
 }
 
 .navbar-navigation-right .mainnav {
@@ -96,6 +100,14 @@ a {
 .navbar-navigation-right .mainnav-item_link:hover {
   letter-spacing: 0.125rem;
   color: #d3ab55;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0;
 }
 
 .header {
@@ -152,21 +164,76 @@ a {
 
 .burger-menu {
   position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
-  width: 6.25rem;
-  height: 6.25rem;
-  background-color: #d3ab55;
+  top: 3.125rem;
+  right: 1.875rem;
+  position: fixed;
   z-index: 300;
 }
 
 .burger-menu .menu {
+  width: 2.8125rem;
+  height: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.3s cubic-bezier(1, 0, 0, 1), -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.burger-menu .menu-line {
+  height: 0.5rem;
+  width: 2.8125rem;
+  background-color: #000;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.burger-menu .menu .menu-line-1 {
+  -webkit-transition: -webkit-transform 0.2s 0.3s;
+  transition: -webkit-transform 0.2s 0.3s;
+  transition: transform 0.2s 0.3s;
+  transition: transform 0.2s 0.3s, -webkit-transform 0.2s 0.3s;
+}
+
+.burger-menu .menu .menu-line-2 {
+  -webkit-transition: opacity 0.2s 0.3s;
+  transition: opacity 0.2s 0.3s;
+}
+
+.burger-menu .menu .menu-line-3 {
+  -webkit-transition: -webkit-transform 0.2s 0.3s;
+  transition: -webkit-transform 0.2s 0.3s;
+  transition: transform 0.2s 0.3s;
+  transition: transform 0.2s 0.3s, -webkit-transform 0.2s 0.3s;
+}
+
+.checkbox:checked ~ .burger-menu .menu {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .burger-menu .menu .menu-line-1 {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.checkbox:checked ~ .burger-menu .menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .burger-menu .menu .menu-line-3 {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 
 .brand-logo {
