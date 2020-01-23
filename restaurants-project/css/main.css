@@ -144,6 +144,38 @@ a {
           transform: translate(-50%, -50%);
 }
 
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 3.125rem 0;
+  background-color: gray;
+}
+
+.about-us-left {
+  width: 50vw;
+}
+
+.about-us-left img {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.about-us-right {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .btn-main {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.0625rem;
